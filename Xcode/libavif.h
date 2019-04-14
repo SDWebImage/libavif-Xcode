@@ -6,7 +6,7 @@
 //  Copyright © 2019 SDWebImage. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for libavif.
 FOUNDATION_EXPORT double libavifVersionNumber;
@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char libavifVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <libavif/PublicHeader.h>
 
-#import "avif.h"
+#import <libavif/avif.h>
