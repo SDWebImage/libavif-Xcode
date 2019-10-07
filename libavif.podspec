@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libavif'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'libavif - Library for encoding and decoding .avif files'
 
 # This description is used to generate tags and improve search results.
@@ -33,12 +33,36 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
 
-  s.source_files = 'src/**/*.{h,c,cc}', 'ext/gb/*.{h,c,cc}', 'include/avif/*.h'
-  s.public_header_files = 'include/avif/avif.h'
-  s.preserve_paths = 'src', 'include/avif', 'ext/gb'
+  s.subspec 'libavif' do |ss|
+    ss.source_files = 'src/**/*.{h,c,cc}', 'ext/gb/*.{h,c,cc}', 'include/avif/*.h'
+    ss.public_header_files = 'include/avif/avif.h'
+    ss.exclude_files = 'src/codec_aom.c', 'src/codec_dav1d.c'
+    ss.preserve_paths = 'src', 'include/avif', 'ext/gb'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include',
+    }
+  end
 
-  s.xcconfig = {
-    'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include ${PODS_ROOT}/libaom/aom',
-  }
-  s.dependency 'libaom', '>= 1.0.1'
+  s.subspec 'libaom' do |ss|
+    ss.dependency 'libaom', '>= 1.0.1'
+    ss.dependency 'libavif/libavif'
+    ss.source_files = 'src/codec_aom.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include ${PODS_ROOT}/libaom/aom',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_AOM=1'
+    }
+  end
+
+  s.subspec 'libdav1d' do |ss|
+    ss.dependency 'libdav1d', '>= 0.4.0'
+    ss.dependency 'libavif/libaom' # AVIF Encoding still need aom
+    ss.source_files = 'src/codec_dav1d.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include ${PODS_ROOT}/libdav1d/dav1d/include',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
+    }
+  end
+
+  # default with aom
+  s.default_subspecs = 'libaom'
 end
