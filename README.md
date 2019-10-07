@@ -18,9 +18,15 @@ This repo also including the CocoaPods's spec file to use libavif.
 + tvOS 9.0
 + watchOS 2.0
 
-## Note
+## aom && dav1d
 
-From v1.0.4, the libavif is part of [AOM](http://aomedia.org/). And became stable to use in product.
+By default, libavif is built with [aom](https://aomedia.googlesource.com/aom/) codec support. aom is the first AV1 codec during the standard draft implementation.
+
+[dav1d](https://github.com/videolan/dav1d) is the new and next generation AV1 codec, focused on speed and correctness.
+
+See more about [explanation for why starting a new project but not improving aom](https://github.com/videolan/dav1d#why-do-you-not-improve-libaom-rather-than-starting-a-new-project)
+
+From v0.3.0, libavif can built with dav1d. For CocoaPods user, you can simply use the subspec for this. Carthage for optional dav1d codec is not supported currently.
 
 ## Installation
 
@@ -38,6 +44,11 @@ libavif is available through [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 ```
 pod 'libavif'
+```
+
+If you need the dav1d codec, use the subspec:
+```
+pod 'libavif/libdav1d'
 ```
 
 ## Usage
