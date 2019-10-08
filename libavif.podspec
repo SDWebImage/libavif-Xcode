@@ -35,7 +35,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'libaom' do |ss|
     ss.dependency 'libaom', '>= 1.0.1'
-    ss.source_files = 'src/**/*.{h,c,cc}', 'ext/gb/*.{h,c,cc}', 'include/avif/*.h', 'src/codec_aom.c'
+    ss.source_files = 'src/**/*.{h,c,cc}', 'include/avif/*.h', 'src/codec_aom.c'
     ss.public_header_files = 'include/avif/avif.h'
     ss.exclude_files = 'src/codec_dav1d.c'
     ss.pod_target_xcconfig = {
@@ -56,5 +56,5 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   # default with aom
   s.default_subspecs = 'libaom'
-  s.preserve_paths = 'src', 'include/avif', 'ext/gb'
+  s.preserve_paths = 'src', 'include/avif'
 end
