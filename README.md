@@ -60,7 +60,6 @@ By default, libavif is built with aom decoding/encoding codec, which is stable, 
 
 ```
 pod 'libavif'
-pod 'libavif/aom' # or this
 ```
 
 If you need the dav1d decoding codec, use the subspec:
