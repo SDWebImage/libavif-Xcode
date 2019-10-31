@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libavif'
-  s.version          = '0.4.2'
+  s.version          = '0.4.3'
   s.summary          = 'libavif - Library for encoding and decoding .avif files'
 
 # This description is used to generate tags and improve search results.
@@ -33,24 +33,46 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
 
-  s.subspec 'libaom' do |ss|
-    ss.dependency 'libaom', '>= 1.0.1'
-    ss.source_files = 'src/**/*.{h,c,cc}', 'include/avif/*.h', 'src/codec_aom.c'
+  s.subspec 'core' do |ss|
+    ss.source_files = 'src/**/*.{h,c,cc}', 'include/avif/*.h'
     ss.public_header_files = 'include/avif/avif.h'
-    ss.exclude_files = 'src/codec_dav1d.c'
+    ss.exclude_files = 'src/codec_*.c'
     ss.pod_target_xcconfig = {
-      'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include ${PODS_ROOT}/libaom/aom',
+      'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include'
+    }
+  end
+
+  s.subspec 'libaom' do |ss|
+    ss.dependency 'libavif/core'
+    ss.dependency 'libaom', '>= 1.0.1'
+    ss.source_files = 'src/codec_aom.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libaom/aom',
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_AOM=1'
     }
   end
 
   s.subspec 'libdav1d' do |ss|
+    ss.dependency 'libavif/core'
     ss.dependency 'libdav1d', '>= 0.4.0'
-    ss.dependency 'libavif/libaom' # AVIF Encoding still need aom
     ss.source_files = 'src/codec_dav1d.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libdav1d/dav1d/include',
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
+    }
+  end
+
+  s.subspec 'librav1e' do |ss|
+    ss.dependency 'libavif/core'
+    ss.dependency 'librav1e', '>= 0.1.0'
+    ss.source_files = 'src/codec_rav1e.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/librav1e/rav1e/include',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_RAV1E=1'
+    }
+    ss.platforms = {
+      'ios' => '8.0',
+      'osx' => '10.7'
     }
   end
 
