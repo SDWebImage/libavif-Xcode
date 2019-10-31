@@ -64,7 +64,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'librav1e' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'librav1e', '>= 0.1.0'
+    ss.dependency 'librav1e', '>= 0.1.0-beta'
     ss.source_files = 'src/codec_rav1e.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/librav1e/rav1e/include',
