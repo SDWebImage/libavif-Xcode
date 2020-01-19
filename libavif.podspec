@@ -44,7 +44,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'libaom' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'libaom', '>= 1.0.1'
+    ss.dependency 'libaom', '>= 1.0.2'
     ss.source_files = 'src/codec_aom.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libaom/aom',
