@@ -7,7 +7,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/SDWebImage/libavif-Xcode)
 
 A wrapper for [libavif](https://github.com/AOMediaCodec/libavif) + Xcode project.
-This enables Carthage support
+This enables Carthage && SwiftPM support.
 
 This repo also including the CocoaPods's spec file to use libavif.
 
@@ -52,6 +52,8 @@ libavif is (via this repo) available through [Carthage](https://github.com/Carth
 github "SDWebImage/libavif-Xcode"
 ```
 
+Note Carthage does not support dav1d or rav1e optional codec, use only aom.
+
 ### CocoaPods
 
 libavif is available through [CocoaPods](https://github.com/CocoaPods/CocoaPods).
@@ -74,9 +76,40 @@ If you need the rav1e encoding codec, use the subspec:
 pod 'libavif/librav1e'
 ```
 
+### SwiftPM
+
+libavif is available through [Swift Package Manager](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg).
+
+```swift
+let package = Package(
+    dependencies: [
+        .package(url: "https://github.com/SDWebImage/libavif-Xcode", from: "0.4.5")
+    ],
+    // ...
+)
+```
+
+Note SwiftPM does not support dav1d or rav1e optional codec, use only aom.
+
 ## Usage
 
 Use libavif as you would normally, this is just a repo that adds an Xcode proj.
+
+For Swift Package Manager user, it's recommended to use the modular import instead of C headers.
+
++ Objective-C
+
+```objective-c
+@import libavif;
+// or if you don't use module
+#import <avif/avif.h>
+```
+
++ Swift
+
+```swift
+import libavif
+```
 
 ## License
 
