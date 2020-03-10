@@ -49,6 +49,10 @@
 		3237D3F2226391ED001D069D /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C2B17B226381D400EA889C /* libaom.framework */; };
 		3237D3F4226391F6001D069D /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3237D3F3226391F6001D069D /* libaom.framework */; };
 		3237D3F6226391FF001D069D /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3237D3F5226391FF001D069D /* libaom.framework */; };
+		326C2F4424176EAB0064DB9A /* alpha.c in Sources */ = {isa = PBXBuildFile; fileRef = 326C2F4324176EAB0064DB9A /* alpha.c */; };
+		326C2F4524176EAB0064DB9A /* alpha.c in Sources */ = {isa = PBXBuildFile; fileRef = 326C2F4324176EAB0064DB9A /* alpha.c */; };
+		326C2F4624176EAB0064DB9A /* alpha.c in Sources */ = {isa = PBXBuildFile; fileRef = 326C2F4324176EAB0064DB9A /* alpha.c */; };
+		326C2F4724176EAB0064DB9A /* alpha.c in Sources */ = {isa = PBXBuildFile; fileRef = 326C2F4324176EAB0064DB9A /* alpha.c */; };
 		32C2A8C722636E6500EA889C /* libavif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8C522636E6500EA889C /* libavif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32C2AD1E22636E8200EA889C /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; };
 		32C2AD1F22636E8200EA889C /* avif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CF22636E8100EA889C /* avif.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +92,7 @@
 		3237D3BD2263914E001D069D /* libavif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libavif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3237D3F3226391F6001D069D /* libaom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libaom.framework; path = Carthage/Build/tvOS/libaom.framework; sourceTree = "<group>"; };
 		3237D3F5226391FF001D069D /* libaom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libaom.framework; path = Carthage/Build/watchOS/libaom.framework; sourceTree = "<group>"; };
+		326C2F4324176EAB0064DB9A /* alpha.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = alpha.c; sourceTree = "<group>"; };
 		32C2A8B822636DC600EA889C /* libavif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libavif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C2A8C422636E6500EA889C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C2A8C522636E6500EA889C /* libavif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libavif.h; sourceTree = "<group>"; };
@@ -215,6 +220,7 @@
 		32C2AD1022636E8100EA889C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				326C2F4324176EAB0064DB9A /* alpha.c */,
 				32C2AD1122636E8100EA889C /* avif.c */,
 				32C2AD1222636E8100EA889C /* mem.c */,
 				32C2AD1322636E8100EA889C /* rawdata.c */,
@@ -472,6 +478,7 @@
 				3237D3CD2263915B001D069D /* write.c in Sources */,
 				3237D3C72263915B001D069D /* rawdata.c in Sources */,
 				3237D3CA2263915B001D069D /* reformat.c in Sources */,
+				326C2F4524176EAB0064DB9A /* alpha.c in Sources */,
 				3237D3C62263915B001D069D /* mem.c in Sources */,
 				3237D3C82263915B001D069D /* read.c in Sources */,
 				3237D3CC2263915B001D069D /* colr.c in Sources */,
@@ -489,6 +496,7 @@
 				3237D3D72263915C001D069D /* write.c in Sources */,
 				3237D3D12263915C001D069D /* rawdata.c in Sources */,
 				3237D3D42263915C001D069D /* reformat.c in Sources */,
+				326C2F4624176EAB0064DB9A /* alpha.c in Sources */,
 				3237D3D02263915C001D069D /* mem.c in Sources */,
 				3237D3D22263915C001D069D /* read.c in Sources */,
 				3237D3D62263915C001D069D /* colr.c in Sources */,
@@ -506,6 +514,7 @@
 				3237D3E12263915C001D069D /* write.c in Sources */,
 				3237D3DB2263915C001D069D /* rawdata.c in Sources */,
 				3237D3DE2263915C001D069D /* reformat.c in Sources */,
+				326C2F4724176EAB0064DB9A /* alpha.c in Sources */,
 				3237D3DA2263915C001D069D /* mem.c in Sources */,
 				3237D3DC2263915C001D069D /* read.c in Sources */,
 				3237D3E02263915C001D069D /* colr.c in Sources */,
@@ -523,6 +532,7 @@
 				32C2B12122636E8300EA889C /* avif.c in Sources */,
 				32C2B12522636E8300EA889C /* utils.c in Sources */,
 				32C2B12822636E8300EA889C /* colr.c in Sources */,
+				326C2F4424176EAB0064DB9A /* alpha.c in Sources */,
 				32C2B12A22636E8300EA889C /* stream.c in Sources */,
 				32C2B12222636E8300EA889C /* mem.c in Sources */,
 				32C2B12922636E8300EA889C /* write.c in Sources */,
