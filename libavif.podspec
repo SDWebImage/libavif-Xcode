@@ -54,7 +54,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'libdav1d' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'libdav1d', '>= 0.4.0'
+    ss.dependency 'libdav1d', '>= 0.6.0'
     ss.source_files = 'src/codec_dav1d.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libdav1d/dav1d/include',
@@ -64,7 +64,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'librav1e' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'librav1e', '>= 0.1.0'
+    ss.dependency 'librav1e', '>= 0.3.0'
     ss.source_files = 'src/codec_rav1e.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/librav1e/rav1e/include',
@@ -75,6 +75,11 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
       'osx' => '10.7'
     }
   end
+
+  # hack to fix the header include issue from CocoaPods
+  s.prepare_command = <<-CMD
+                      sed -i '' 's/\\"rav1e\\/rav1e.h\\"/\\"librav1e\\/rav1e.h\\"/g' './src/codec_rav1e.c' || true
+                      CMD
 
   # default with aom
   s.default_subspecs = 'libaom'
