@@ -22,7 +22,7 @@ let package = Package(
             name: "libavif",
             dependencies: ["libaom"],
             path: "avif",
-            exclude: ["src/codec_dav1d.c", "src/codec_rav1e.c"],
+            exclude: ["src/codec_dav1d.c", "src/codec_rav1e.c", "src/codec_libgav1.c"],
             sources: ["src"],
             publicHeadersPath: "include",
             cSettings: [.define("AVIF_CODEC_AOM", to: "1")]
