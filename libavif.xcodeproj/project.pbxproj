@@ -71,6 +71,10 @@
 		32C2B17E226383C300EA889C /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C2B16E22637DD300EA889C /* libaom.framework */; };
 		32C2B1802263856400EA889C /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C2B16E22637DD300EA889C /* libaom.framework */; };
 		32C2B1832263865300EA889C /* libaom.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32C2B16E22637DD300EA889C /* libaom.framework */; };
+		32F9A05724F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
+		32F9A05824F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
+		32F9A05924F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
+		32F9A05A24F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,6 +116,7 @@
 		32C2B1742263819000EA889C /* libavifExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libavifExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C2B1762263819000EA889C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32C2B17B226381D400EA889C /* libaom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libaom.framework; path = Carthage/Build/iOS/libaom.framework; sourceTree = "<group>"; };
+		32F9A05624F75EBD0016584B /* obu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = obu.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +231,7 @@
 				32C2AD1322636E8100EA889C /* rawdata.c */,
 				32C2AD1422636E8100EA889C /* read.c */,
 				32C2AD1522636E8100EA889C /* utils.c */,
+				32F9A05624F75EBD0016584B /* obu.c */,
 				32C2AD1622636E8100EA889C /* reformat.c */,
 				32C2AD1722636E8100EA889C /* codec_aom.c */,
 				32C2AD1822636E8100EA889C /* colr.c */,
@@ -472,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F9A05824F75EBD0016584B /* obu.c in Sources */,
 				3237D3C92263915B001D069D /* utils.c in Sources */,
 				3237D3C52263915B001D069D /* avif.c in Sources */,
 				3237D3CB2263915B001D069D /* codec_aom.c in Sources */,
@@ -490,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F9A05924F75EBD0016584B /* obu.c in Sources */,
 				3237D3D32263915C001D069D /* utils.c in Sources */,
 				3237D3CF2263915C001D069D /* avif.c in Sources */,
 				3237D3D52263915C001D069D /* codec_aom.c in Sources */,
@@ -508,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F9A05A24F75EBD0016584B /* obu.c in Sources */,
 				3237D3DD2263915C001D069D /* utils.c in Sources */,
 				3237D3D92263915C001D069D /* avif.c in Sources */,
 				3237D3DF2263915C001D069D /* codec_aom.c in Sources */,
@@ -526,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F9A05724F75EBD0016584B /* obu.c in Sources */,
 				32C2B12322636E8300EA889C /* rawdata.c in Sources */,
 				32C2B12722636E8300EA889C /* codec_aom.c in Sources */,
 				32C2B12622636E8300EA889C /* reformat.c in Sources */,
