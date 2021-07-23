@@ -29,7 +29,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   s.source           = { :git => 'https://github.com/AOMediaCodec/libavif.git', :tag => 'v' + s.version.to_s }
 
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.7'
+  s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
 
@@ -44,7 +44,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'libaom' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'libaom', '>= 1.0.2'
+    ss.dependency 'libaom', '>= 2.0.0'
     ss.source_files = 'src/codec_aom.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libaom/aom',
@@ -72,7 +72,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     }
     ss.platforms = {
       'ios' => '8.0',
-      'osx' => '10.7'
+      'osx' => '10.10'
     }
   end
 
