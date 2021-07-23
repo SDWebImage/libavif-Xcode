@@ -48,7 +48,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     ss.source_files = 'src/codec_aom.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libaom/aom',
-      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_AOM=1'
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_AOM=1 AVIF_CODEC_AOM_DECODE=1 AVIF_CODEC_AOM_ENCODE=1'
     }
   end
 
@@ -58,7 +58,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     ss.source_files = 'src/codec_dav1d.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libdav1d/dav1d/include',
-      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1 AVIF_CODEC_AOM_DECODE=0'
     }
   end
 
@@ -68,11 +68,21 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     ss.source_files = 'src/codec_rav1e.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/librav1e/rav1e/include',
-      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_RAV1E=1'
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_RAV1E=1 AVIF_CODEC_AOM_ENCODE=0'
     }
     ss.platforms = {
       'ios' => '8.0',
       'osx' => '10.10'
+    }
+  end
+
+  s.subspec 'svt-av1' do |ss|
+    ss.dependency 'libavif/core'
+    ss.dependency 'svt-av1', '>= 0.8.7'
+    ss.source_files = 'src/codec_svt.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/svt-av1/include',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_SVT=1 AVIF_CODEC_AOM_ENCODE=0'
     }
   end
 

@@ -75,6 +75,10 @@
 		32C2B17E226383C300EA889C /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C2B16E22637DD300EA889C /* libaom.framework */; };
 		32C2B1802263856400EA889C /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C2B16E22637DD300EA889C /* libaom.framework */; };
 		32C2B1832263865300EA889C /* libaom.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32C2B16E22637DD300EA889C /* libaom.framework */; };
+		32C8C6AD26AAC7310078F541 /* reformat_libyuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C8C6AC26AAC7310078F541 /* reformat_libyuv.c */; };
+		32C8C6AE26AAC7310078F541 /* reformat_libyuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C8C6AC26AAC7310078F541 /* reformat_libyuv.c */; };
+		32C8C6AF26AAC7310078F541 /* reformat_libyuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C8C6AC26AAC7310078F541 /* reformat_libyuv.c */; };
+		32C8C6B026AAC7310078F541 /* reformat_libyuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C8C6AC26AAC7310078F541 /* reformat_libyuv.c */; };
 		32F9A05724F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
 		32F9A05824F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
 		32F9A05924F75EBD0016584B /* obu.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F9A05624F75EBD0016584B /* obu.c */; };
@@ -121,6 +125,7 @@
 		32C2B1742263819000EA889C /* libavifExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libavifExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C2B1762263819000EA889C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32C2B17B226381D400EA889C /* libaom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libaom.framework; path = Carthage/Build/iOS/libaom.framework; sourceTree = "<group>"; };
+		32C8C6AC26AAC7310078F541 /* reformat_libyuv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reformat_libyuv.c; sourceTree = "<group>"; };
 		32F9A05624F75EBD0016584B /* obu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = obu.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +243,7 @@
 				32C2AD1522636E8100EA889C /* utils.c */,
 				32F9A05624F75EBD0016584B /* obu.c */,
 				32C2AD1622636E8100EA889C /* reformat.c */,
+				32C8C6AC26AAC7310078F541 /* reformat_libyuv.c */,
 				32C2AD1722636E8100EA889C /* codec_aom.c */,
 				32C2AD1822636E8100EA889C /* colr.c */,
 				32C2AD1922636E8100EA889C /* write.c */,
@@ -486,6 +492,7 @@
 			files = (
 				32F9A05824F75EBD0016584B /* obu.c in Sources */,
 				3237D3C92263915B001D069D /* utils.c in Sources */,
+				32C8C6AE26AAC7310078F541 /* reformat_libyuv.c in Sources */,
 				3237D3C52263915B001D069D /* avif.c in Sources */,
 				3237D3CB2263915B001D069D /* codec_aom.c in Sources */,
 				3237D3CD2263915B001D069D /* write.c in Sources */,
@@ -506,6 +513,7 @@
 			files = (
 				32F9A05924F75EBD0016584B /* obu.c in Sources */,
 				3237D3D32263915C001D069D /* utils.c in Sources */,
+				32C8C6AF26AAC7310078F541 /* reformat_libyuv.c in Sources */,
 				3237D3CF2263915C001D069D /* avif.c in Sources */,
 				3237D3D52263915C001D069D /* codec_aom.c in Sources */,
 				3237D3D72263915C001D069D /* write.c in Sources */,
@@ -526,6 +534,7 @@
 			files = (
 				32F9A05A24F75EBD0016584B /* obu.c in Sources */,
 				3237D3DD2263915C001D069D /* utils.c in Sources */,
+				32C8C6B026AAC7310078F541 /* reformat_libyuv.c in Sources */,
 				3237D3D92263915C001D069D /* avif.c in Sources */,
 				3237D3DF2263915C001D069D /* codec_aom.c in Sources */,
 				3237D3E12263915C001D069D /* write.c in Sources */,
@@ -546,6 +555,7 @@
 			files = (
 				32F9A05724F75EBD0016584B /* obu.c in Sources */,
 				32C2B12322636E8300EA889C /* rawdata.c in Sources */,
+				32C8C6AD26AAC7310078F541 /* reformat_libyuv.c in Sources */,
 				32C2B12722636E8300EA889C /* codec_aom.c in Sources */,
 				32C2B12622636E8300EA889C /* reformat.c in Sources */,
 				32C2B12122636E8300EA889C /* avif.c in Sources */,
@@ -811,8 +821,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
+					"AVIF_CODEC_AOM_ENCODE=1",
+					"AVIF_CODEC_AOM_DECODE=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -874,6 +884,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"AVIF_CODEC_AOM_ENCODE=1",
+					"AVIF_CODEC_AOM_DECODE=1",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

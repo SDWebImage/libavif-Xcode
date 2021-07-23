@@ -42,6 +42,12 @@ From v0.4.3, libavif can built with rav1e. For CocoaPods user, you can simply us
 
 Note rav1e currently only support iOS && macOS. watchOS and tvOS supports need Rust community upstream support.
 
+### SVT-AV1 (Encoding)
+
+[SVT-AV1](https://gitlab.com/AOMediaCodec/SVT-AV1) is the Scalable Video Technology for AV1 (SVT-AV1 Encoder and Decoder) is an AV1-compliant encoder/decoder library core.
+
+From v0.8.3, libavif can built with STV-AV1. For For CocoaPods user, you can simply use the subspec for this.
+
 ## Installation
 
 ### Carthage
@@ -52,7 +58,7 @@ libavif is (via this repo) available through [Carthage](https://github.com/Carth
 github "SDWebImage/libavif-Xcode"
 ```
 
-Note Carthage does not support dav1d or rav1e optional codec, use only aom.
+Note Carthage does not support dav1d/rav1e/SVT-AV1 optional codec, use only aom.
 
 ### CocoaPods
 
@@ -76,6 +82,12 @@ If you need the rav1e encoding codec, use the subspec:
 pod 'libavif/librav1e'
 ```
 
+If you need the SVT-AV1 encoding codec, use the subspec:
+
+```
+pod 'libavif/SVT-AV1'
+```
+
 ### SwiftPM
 
 libavif is available through [Swift Package Manager](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg).
@@ -89,7 +101,7 @@ let package = Package(
 )
 ```
 
-Note SwiftPM does not support dav1d or rav1e optional codec, use only aom.
+Note SwiftPM does not support dav1d/rav1e/SVT-AV1 optional codec, use only aom.
 
 ## Usage
 

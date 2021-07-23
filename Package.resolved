@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/SDWebImage/libaom-Xcode.git",
         "state": {
           "branch": null,
-          "revision": "81e75e1663855b8b53f6e26ea1ae087ea8f6ccbc",
-          "version": "1.0.2"
+          "revision": "482cafbebbc5f32378b82339b7580761fab4fd23",
+          "version": "2.0.2"
+        }
+      },
+      {
+        "package": "libvmaf",
+        "repositoryURL": "https://github.com/SDWebImage/libvmaf-Xcode.git",
+        "state": {
+          "branch": null,
+          "revision": "8d26d5f82704cd5f6382676fa3d54c0d72b784e0",
+          "version": "2.2.0"
         }
       }
     ]

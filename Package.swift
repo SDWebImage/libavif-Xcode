@@ -22,10 +22,10 @@ let package = Package(
             name: "libavif",
             dependencies: ["libaom"],
             path: "avif",
-            exclude: ["src/codec_dav1d.c", "src/codec_rav1e.c", "src/codec_libgav1.c"],
+            exclude: ["src/codec_dav1d.c", "src/codec_rav1e.c", "src/codec_libgav1.c", "src/codec_svt.c"],
             sources: ["src"],
             publicHeadersPath: "include",
-            cSettings: [.define("AVIF_CODEC_AOM", to: "1")]
+            cSettings: [.define("AVIF_CODEC_AOM", to: "1"), .define("AVIF_CODEC_AOM_DECODE", to: "1"), .define("AVIF_CODEC_AOM_ENCODE", to: "1")]
         )
     ],
     cLanguageStandard: .gnu11,
