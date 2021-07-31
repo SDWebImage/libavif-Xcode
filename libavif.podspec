@@ -62,6 +62,16 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     }
   end
 
+  s.subspec 'libgav1' do |ss|
+    ss.dependency 'libavif/core'
+    ss.dependency 'libgav1', '>= 0.16.3'
+    ss.source_files = 'src/codec_libgav1.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libgav1/include',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_LIBGAV1=1 AVIF_CODEC_AOM_DECODE=0'
+    }
+  end
+
   s.subspec 'librav1e' do |ss|
     ss.dependency 'libavif/core'
     ss.dependency 'librav1e', '>= 0.3.0'

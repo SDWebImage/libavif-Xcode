@@ -18,11 +18,12 @@ This repo also including the CocoaPods's spec file to use libavif.
 + tvOS 9.0 (rav1e unavailable)
 + watchOS 2.0 (rav1e unavailable)
 
-## aom && dav1d && rav1e
+## AV1 Codec
 
 ### aom
 
 By default, libavif is built with [aom](https://aomedia.googlesource.com/aom/) codec support. aom is the first AV1 codec during the standard draft implementation.
+However, there are also other AV1 codec implementation available. libavif supports most of them. You can choose to integarte the one you'd like. By default we use aom for both decoding and encoding.
 
 ### dav1d (Decoding)
 
@@ -31,6 +32,12 @@ By default, libavif is built with [aom](https://aomedia.googlesource.com/aom/) c
 See more about [explanation for why starting a new project but not improving aom](https://github.com/videolan/dav1d#why-do-you-not-improve-libaom-rather-than-starting-a-new-project)
 
 From v0.3.0, libavif can built with dav1d. For CocoaPods user, you can simply use the subspec for this. Carthage for optional dav1d codec is not supported currently.
+
+### libgav1 (Decoding)
+
+[libgav1](https://chromium.googlesource.com/codecs/libgav1/) libgav1 is a Main profile (0) & High profile (1) compliant AV1 decoder. More information on the AV1 video format can be found at aomedia.org.
+
+From v0.8.3, libavif can built with libgav1. For For CocoaPods user, you can simply use the subspec for this.
 
 ### rav1e (Encoding)
 
@@ -74,6 +81,12 @@ If you need the dav1d decoding codec, use the subspec:
 
 ```
 pod 'libavif/libdav1d'
+```
+
+If you need the libgav1 decoding codec, use the subspec:
+
+```
+pod 'libavif/libgav1'
 ```
 
 If you need the rav1e encoding codec, use the subspec:
