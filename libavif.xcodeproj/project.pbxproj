@@ -49,6 +49,10 @@
 		3237D3F2226391ED001D069D /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C2B17B226381D400EA889C /* libaom.framework */; };
 		3237D3F4226391F6001D069D /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3237D3F3226391F6001D069D /* libaom.framework */; };
 		3237D3F6226391FF001D069D /* libaom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3237D3F5226391FF001D069D /* libaom.framework */; };
+		3253D7FC28265F350011C134 /* scale.c in Sources */ = {isa = PBXBuildFile; fileRef = 3253D7FB28265F350011C134 /* scale.c */; };
+		3253D7FD28265F350011C134 /* scale.c in Sources */ = {isa = PBXBuildFile; fileRef = 3253D7FB28265F350011C134 /* scale.c */; };
+		3253D7FE28265F350011C134 /* scale.c in Sources */ = {isa = PBXBuildFile; fileRef = 3253D7FB28265F350011C134 /* scale.c */; };
+		3253D7FF28265F350011C134 /* scale.c in Sources */ = {isa = PBXBuildFile; fileRef = 3253D7FB28265F350011C134 /* scale.c */; };
 		325A1DA726A7C6A40024B13C /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 325A1DA626A7C6A40024B13C /* io.c */; };
 		325A1DA826A7C6A40024B13C /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 325A1DA626A7C6A40024B13C /* io.c */; };
 		325A1DA926A7C6A40024B13C /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 325A1DA626A7C6A40024B13C /* io.c */; };
@@ -108,6 +112,7 @@
 		3237D3BD2263914E001D069D /* libavif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libavif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3237D3F3226391F6001D069D /* libaom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libaom.framework; path = Carthage/Build/tvOS/libaom.framework; sourceTree = "<group>"; };
 		3237D3F5226391FF001D069D /* libaom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libaom.framework; path = Carthage/Build/watchOS/libaom.framework; sourceTree = "<group>"; };
+		3253D7FB28265F350011C134 /* scale.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scale.c; sourceTree = "<group>"; };
 		325A1DA626A7C6A40024B13C /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
 		326C2F4324176EAB0064DB9A /* alpha.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = alpha.c; sourceTree = "<group>"; };
 		326D682726B564B000217473 /* diag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = diag.c; sourceTree = "<group>"; };
@@ -255,6 +260,7 @@
 				32C2AD1922636E8100EA889C /* write.c */,
 				32C2AD1A22636E8100EA889C /* stream.c */,
 				325A1DA626A7C6A40024B13C /* io.c */,
+				3253D7FB28265F350011C134 /* scale.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3253D7FD28265F350011C134 /* scale.c in Sources */,
 				32F9A05824F75EBD0016584B /* obu.c in Sources */,
 				3237D3C92263915B001D069D /* utils.c in Sources */,
 				32C8C6AE26AAC7310078F541 /* reformat_libyuv.c in Sources */,
@@ -518,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3253D7FE28265F350011C134 /* scale.c in Sources */,
 				32F9A05924F75EBD0016584B /* obu.c in Sources */,
 				3237D3D32263915C001D069D /* utils.c in Sources */,
 				32C8C6AF26AAC7310078F541 /* reformat_libyuv.c in Sources */,
@@ -540,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3253D7FF28265F350011C134 /* scale.c in Sources */,
 				32F9A05A24F75EBD0016584B /* obu.c in Sources */,
 				3237D3DD2263915C001D069D /* utils.c in Sources */,
 				32C8C6B026AAC7310078F541 /* reformat_libyuv.c in Sources */,
@@ -562,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3253D7FC28265F350011C134 /* scale.c in Sources */,
 				32F9A05724F75EBD0016584B /* obu.c in Sources */,
 				32C2B12322636E8300EA889C /* rawdata.c in Sources */,
 				32C8C6AD26AAC7310078F541 /* reformat_libyuv.c in Sources */,
