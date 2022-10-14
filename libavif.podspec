@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libavif'
-  s.version          = '0.10.1'
+  s.version          = '0.11.0-rc1'
   s.summary          = 'libavif - Library for encoding and decoding .avif files'
 
 # This description is used to generate tags and improve search results.
@@ -98,7 +98,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'sharpyuv' do |ss|
     # sharpyuv is part of libwebp
-    ss.dependency 'libwebp', '>=1.2.3'
+    ss.dependency 'libwebp', '>= 1.2.3'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libwebp',
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_LIBSHARPYUV_ENABLED=1'
