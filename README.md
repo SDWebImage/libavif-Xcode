@@ -101,6 +101,12 @@ If you need the SVT-AV1 encoding codec, use the subspec:
 pod 'libavif/SVT-AV1'
 ```
 
+If you need the sharpyuv RGB to YUV420 conversion, use the subspec:
+
+```
+pod 'libavif/sharpyuv'
+```
+
 ### SwiftPM
 
 libavif is available through [Swift Package Manager](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg).

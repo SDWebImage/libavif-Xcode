@@ -96,6 +96,15 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     }
   end
 
+  s.subspec 'sharpyuv' do |ss|
+    # sharpyuv is part of libwebp
+    ss.dependency 'libwebp', '>=1.2.3'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libwebp',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_LIBSHARPYUV_ENABLED=1'
+    }
+  end
+
   # hack to fix the header include issue from CocoaPods
   s.prepare_command = <<-CMD
                       sed -i '' 's/\\"rav1e\\/rav1e.h\\"/\\"librav1e\\/rav1e.h\\"/g' './src/codec_rav1e.c' || true
