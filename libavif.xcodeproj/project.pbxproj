@@ -37,11 +37,11 @@
 		3237D3E02263915C001D069D /* colr.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C2AD1822636E8100EA889C /* colr.c */; };
 		3237D3E12263915C001D069D /* write.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C2AD1922636E8100EA889C /* write.c */; };
 		3237D3E22263915C001D069D /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C2AD1A22636E8100EA889C /* stream.c */; };
-		3237D3E922639169001D069D /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; };
+		3237D3E922639169001D069D /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3237D3EA22639169001D069D /* avif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CF22636E8100EA889C /* avif.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3237D3EB22639169001D069D /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; };
+		3237D3EB22639169001D069D /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3237D3EC22639169001D069D /* avif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CF22636E8100EA889C /* avif.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3237D3ED2263916A001D069D /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; };
+		3237D3ED2263916A001D069D /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3237D3EE2263916A001D069D /* avif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CF22636E8100EA889C /* avif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3237D3EF22639173001D069D /* libavif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8C522636E6500EA889C /* libavif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3237D3F022639174001D069D /* libavif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8C522636E6500EA889C /* libavif.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,7 +66,7 @@
 		326D682A26B564B000217473 /* diag.c in Sources */ = {isa = PBXBuildFile; fileRef = 326D682726B564B000217473 /* diag.c */; };
 		326D682B26B564B000217473 /* diag.c in Sources */ = {isa = PBXBuildFile; fileRef = 326D682726B564B000217473 /* diag.c */; };
 		32C2A8C722636E6500EA889C /* libavif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8C522636E6500EA889C /* libavif.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32C2AD1E22636E8200EA889C /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; };
+		32C2AD1E22636E8200EA889C /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CE22636E8100EA889C /* internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32C2AD1F22636E8200EA889C /* avif.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C2A8CF22636E8100EA889C /* avif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32C2B12122636E8300EA889C /* avif.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C2AD1122636E8100EA889C /* avif.c */; };
 		32C2B12222636E8300EA889C /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C2AD1222636E8100EA889C /* mem.c */; };

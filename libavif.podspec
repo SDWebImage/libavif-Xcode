@@ -35,7 +35,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'core' do |ss|
     ss.source_files = 'src/**/*.{h,c,cc}', 'include/avif/*.h'
-    ss.public_header_files = 'include/avif/avif.h'
+    ss.public_header_files = 'include/avif/*.h'
     ss.exclude_files = 'src/codec_*.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/libavif/include $(PODS_TARGET_SRCROOT)/include'
