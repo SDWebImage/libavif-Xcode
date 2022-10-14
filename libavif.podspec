@@ -28,7 +28,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   s.author           = { 'Joe Drago' => 'joedrago@gmail.com' }
   s.source           = { :git => 'https://github.com/AOMediaCodec/libavif.git', :tag => 'v' + s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
@@ -81,7 +81,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_RAV1E=1 AVIF_CODEC_AOM_ENCODE=0'
     }
     ss.platforms = {
-      'ios' => '8.0',
+      'ios' => '9.0',
       'osx' => '10.10'
     }
   end
