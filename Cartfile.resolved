@@ -1,2 +1,2 @@
-github "SDWebImage/libaom-Xcode" "2.0.2"
-github "SDWebImage/libvmaf-Xcode" "2.2.0"
+github "SDWebImage/libaom-Xcode" "3.0.0"
+github "SDWebImage/libvmaf-Xcode" "2.3.1"

@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/SDWebImage/libaom-Xcode.git", from: "2.0.0")
+        .package(url: "https://github.com/SDWebImage/libaom-Xcode.git", from: "3.0.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,7 +25,7 @@ let package = Package(
             name: "libavif",
             dependencies: ["libaom"],
             path: "avif",
-            exclude: ["src/codec_dav1d.c", "src/codec_rav1e.c", "src/codec_libgav1.c", "src/codec_svt.c"],
+            exclude: ["src/codec_dav1d.c", "src/codec_rav1e.c", "src/codec_libgav1.c", "src/codec_svt.c", "src/codec_avm.c"],
             sources: ["src"],
             publicHeadersPath: "include",
             cSettings: [.define("AVIF_CODEC_AOM", to: "1"), .define("AVIF_CODEC_AOM_DECODE", to: "1"), .define("AVIF_CODEC_AOM_ENCODE", to: "1")]

@@ -55,6 +55,10 @@ Note rav1e currently only support iOS && macOS. watchOS and tvOS supports need R
 
 From v0.8.3, libavif can built with STV-AV1. For For CocoaPods user, you can simply use the subspec for this.
 
+### AVM (Not supported)
+
+[avm](https://gitlab.com/AOMediaCodec/avm) is not supported currently due to experimental. Which is optional codec from libavif v1.0.0
+
 ## Installation
 
 ### Carthage

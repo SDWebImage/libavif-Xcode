@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libavif'
-  s.version          = '0.11.1'
+  s.version          = '1.0.0'
   s.summary          = 'libavif - Library for encoding and decoding .avif files'
 
 # This description is used to generate tags and improve search results.
@@ -44,7 +44,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'libaom' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'libaom', '>= 2.0.0'
+    ss.dependency 'libaom', '>= 3.0.0'
     ss.source_files = 'src/codec_aom.c'
     ss.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libaom/aom',
